@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Chip from '@material-ui/core/Chip';
 
 
-export default function MultiSelectChips(chipsData) {
+export default function MultiSelectChips({chipsData}) {
 
   const [chipsList, setChipsList] = useState(chipsData)
 
