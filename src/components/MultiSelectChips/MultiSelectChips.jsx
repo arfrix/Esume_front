@@ -10,18 +10,20 @@ export default function MultiSelectChips({chipsData}) {
     setChipsList((chipsList) => chipsList.filter((chip) => chip.key !== targetChipKey))
   }
 
-
   return (
     <div>
-      {chipsList.map((chip) => {
+      {chipsList && chipsList.map((chip) => {
 
         return(
-          <li key={chip.key}>
-            <chip
+          <div key={chip.key}>
+            <Chip
               label={chip.label}
               onDelete={deleteChips(chip.key)}
             />
-          </li>
+            {/* <div>
+              {chip.label}
+            </div> */}
+          </div>
         )
       })}
       
