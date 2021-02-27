@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Chip from '@material-ui/core/Chip';
-
+import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import './MultiSelectChips.scss'
 
 export default function MultiSelectChips({chipsData}) {
 
@@ -11,18 +13,16 @@ export default function MultiSelectChips({chipsData}) {
   }
 
   return (
-    <div>
+    <div className="multiSelectChips">
       {chipsList && chipsList.map((chip) => {
 
         return(
           <div key={chip.key}>
             <Chip
+            className="test"
               label={chip.label}
-              onDelete={deleteChips(chip.key)}
+              onDelete={() => deleteChips(chip.key)}
             />
-            {/* <div>
-              {chip.label}
-            </div> */}
           </div>
         )
       })}

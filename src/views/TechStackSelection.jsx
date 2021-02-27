@@ -8,6 +8,11 @@ export default function TechStackSelection() {
     { key: 2, label: 'excel' },
     { key: 3, label: 'alphabet' },
     { key: 4, label: 'internet explorer' },
+    { key: 0, label: 'dos' },
+    { key: 1, label: 'jquery' },
+    { key: 2, label: 'excel' },
+    { key: 3, label: 'alphabet' },
+    { key: 4, label: 'internet explorer' },
   ]
   return (
     <div>
