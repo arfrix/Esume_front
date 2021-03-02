@@ -1,6 +1,5 @@
 import React from 'react'
 import MultiSelectChips from '../components/MultiSelectChips/MultiSelectChips'
-import Text from '../components/common/text/Text'
 
 export default function TechStackSelection() {
   const chipsData = [
@@ -18,7 +17,6 @@ export default function TechStackSelection() {
   return (
     <div>
       <MultiSelectChips chipsData={chipsData}/>      
-      <Text>سلاااااااام</Text>
     </div>
   )
 }
