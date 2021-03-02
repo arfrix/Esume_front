@@ -5,8 +5,12 @@ import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/sty
 import { orange } from '@material-ui/core/colors';
 import 'normalize.css';
 import Routes from './routes';
+import './index.scss'
 
 const theme = createMuiTheme({
+  typography: {
+    fontFamily: 'IRsans',
+  },
   status: {
     danger: orange[500],
   },
@@ -14,8 +18,8 @@ const theme = createMuiTheme({
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider  theme={theme}>
-      <Routes />
+    <ThemeProvider theme={theme}>
+        <Routes />
     </ThemeProvider >
   </React.StrictMode>,
   document.getElementById('root')

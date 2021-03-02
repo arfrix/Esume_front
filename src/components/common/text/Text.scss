@@ -1,0 +1,25 @@
+@font-face {
+  font-family: IRsans;
+  src: url(../../../assets/fonts/IRANSansWeb.ttf);
+}
+
+.text-base {
+  font-family: IRsans;
+  margin: 0 5px 0 5px;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  height: 26px;
+}
+
+.small {
+  font-size: 12px;
+}
+
+.medium {
+  font-size: 14px;
+}
+
+.large{
+  font-size: 16px;
+}
