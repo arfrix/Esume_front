@@ -1,4 +1,4 @@
-import "./sass/index.scss";
+import "./index.scss";
 import { useState } from "react";
 import PropTypes from "prop-types";
 import Compressor from "compressorjs";
