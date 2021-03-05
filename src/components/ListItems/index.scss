@@ -1,0 +1,17 @@
+.list-item {
+    padding: 8px;
+    &__form {
+        display: flex;
+        flex-direction: column;
+        .list-item__form--title {
+            margin-bottom: 16px;
+        }
+        .list-item__form--text {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__list {
+
+    }
+}
