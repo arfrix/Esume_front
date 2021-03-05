@@ -5,6 +5,7 @@ import { create } from 'jss';
 import Routes from './routes';
 import './assets/css/main.css';
 import ReactDOM from 'react-dom';
+import { faIR } from '@material-ui/core/locale';
 import { orange } from '@material-ui/core/colors';
 import { createMuiTheme, ThemeProvider, StylesProvider, jssPreset } from '@material-ui/core/styles';
 
@@ -17,7 +18,7 @@ const theme = createMuiTheme({
   status: {
     danger: orange[500]
   }
-});
+}, faIR);
 
 ReactDOM.render(
   <React.StrictMode>

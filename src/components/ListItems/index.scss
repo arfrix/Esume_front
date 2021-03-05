@@ -1,17 +1,64 @@
 .list-item {
+    font-family: IRsans;
     padding: 8px;
+
     &__form {
         display: flex;
         flex-direction: column;
+
         .list-item__form--title {
             margin-bottom: 16px;
         }
+
         .list-item__form--text {
             margin-bottom: 16px;
+        }
+
+        &--date {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+            justify-content: space-between;
+        }
+
+        &--checkbox {
+            font-size: 14px;
+            margin-bottom: 16px;
+            span {
+                padding-right: 0;
+            }
         }
     }
 
     &__list {
+        padding: 0;
+        list-style: none;
 
+        li {
+            padding: 16px;
+            margin-top: 16px;
+            border-radius: 6px;
+            background-color: #f1f1f1;
+        }
+
+        &--date {
+            display: flex;
+            font-size: 14px;
+            margin-top: 10px;
+            align-items: center;
+
+            span {
+                margin: 0 6px;
+                font-weight: bold;
+            }
+        }
+
+        &--title {
+            font-weight: bold;
+        }
+
+        &--description {
+            line-height: 30px;
+        }
     }
 }

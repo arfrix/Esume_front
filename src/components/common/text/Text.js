@@ -2,7 +2,7 @@ import React from 'react';
 import './Text.scss';
 
 
-export function Text({ size, color, children }) {
+export function Text({ size, color, children, className }) {
   const fontSize = () => {
     if (size === 'small') {
       return '12px';
@@ -15,7 +15,7 @@ export function Text({ size, color, children }) {
 
   return (
     <p
-      className="text-base"
+      className={`text-base ${className}`}
       style={{
         fontSize: fontSize(),
         color,

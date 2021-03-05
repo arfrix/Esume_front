@@ -6,7 +6,7 @@ export default function Home() {
         <div>
             <ImageUploader width={160} height={160} onUpload={img => console.log(img)} />
             <br />
-            <ListItems width={400} />
+            <ListItems hasDatePicker />
         </div>
     )
 }
