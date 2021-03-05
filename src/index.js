@@ -1,25 +1,30 @@
+import rtl from 'jss-rtl';
 import React from 'react';
 import * as sw from './sw';
-import ReactDOM from 'react-dom';
-import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
-import { orange } from '@material-ui/core/colors';
-import 'normalize.css';
+import { create } from 'jss';
 import Routes from './routes';
-import './index.scss'
+import './assets/css/main.css';
+import ReactDOM from 'react-dom';
+import { orange } from '@material-ui/core/colors';
+import { createMuiTheme, ThemeProvider, StylesProvider, jssPreset } from '@material-ui/core/styles';
 
+const jss = create({ plugins: [...jssPreset().plugins, rtl()] });
 const theme = createMuiTheme({
+  direction: 'rtl',
   typography: {
-    fontFamily: 'IRsans',
+    fontFamily: 'IRsans'
   },
   status: {
-    danger: orange[500],
-  },
+    danger: orange[500]
+  }
 });
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme} >
+      <StylesProvider jss={jss} >
         <Routes />
+      </StylesProvider>
     </ThemeProvider >
   </React.StrictMode>,
   document.getElementById('root')
