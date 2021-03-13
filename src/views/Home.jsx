@@ -1,12 +1,20 @@
 import ImageUploader from "../components/imageUploader";
 import ListItems from "../components/ListItems";
+import StepManager from "../components/stepManager/StepManager"
+
 
 export default function Home() {
+  const config = [
+    {
+      component: ListItems,
+      order: 1
+    }
+  ]
     return (
         <div>
-            <ImageUploader width={160} height={160} onUpload={img => console.log(img)} />
-            <br />
-            <ListItems hasDatePicker />
+            <StepManager currentStep={1} childComponentOrder={1}>
+              <ListItems hasDatePicker />
+            </StepManager>
         </div>
     )
 }
