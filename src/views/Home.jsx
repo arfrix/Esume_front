@@ -1,7 +1,8 @@
 import ImageUploader from "../components/imageUploader";
 import ListItems from "../components/ListItems";
 import StepManager from "../components/stepManager/StepManager"
-
+import SkillLevel from "../views/SkillLevel"
+import TechStackSelection from "../views/TechStackSelection"
 
 export default function Home() {
   const config = [
@@ -13,7 +14,10 @@ export default function Home() {
     return (
         <div>
             <StepManager currentStep={1} childComponentOrder={1}>
-              <ListItems hasDatePicker />
+              <SkillLevel hasDatePicker />
+            </StepManager>
+            <StepManager currentStep={1} childComponentOrder={2}>
+              <TechStackSelection hasDatePicker />
             </StepManager>
         </div>
     )
